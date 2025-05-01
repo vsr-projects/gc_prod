@@ -1,6 +1,3 @@
-/*──────────────────────────────────────────────────────────────────────────────
-  VARIABLES & GLOBAL RESET
-──────────────────────────────────────────────────────────────────────────────*/
 :root {
   --primary-blue: #0056A3;
   --accent-yellow: #FFC600;
@@ -11,222 +8,264 @@
   --gradient-end: #2e7bb4;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-  margin: 0; padding: 0;
-  height: 100%; overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+  height: 100%;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  HEADER
-──────────────────────────────────────────────────────────────────────────────*/
-#mainNavbar {
-  transition: padding .3s, background .3s, box-shadow .3s;
-  padding: 1rem;
-}
-#mainNavbar.scrolled {
-  padding: .5rem !important;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,.1);
-}
-@media (max-width: 991px) {
-  #mainNavbar .navbar-brand img { height: 32px; }
-}
-
-/*──────────────────────────────────────────────────────────────────────────────
-  SCROLL CONTAINER
-──────────────────────────────────────────────────────────────────────────────*/
 .scroll-container {
-  height: 100vh;
-  overflow-y: scroll;
+  height: 100%;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
 }
-.scroll-container > section,
-.scroll-container > footer.panel {
+
+.panel {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
   scroll-snap-align: start;
-  height: 100vh;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  HERO
-──────────────────────────────────────────────────────────────────────────────*/
+/* Header override to sit above everything */
+#mainNavbar {
+  z-index: 1000;
+}
+
+/* Hero */
 .hero-section {
+  background: url('../assets/hero-bg.jpg') center/cover no-repeat;
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: url('../assets/hero-bg.png') center/cover no-repeat;
-  display: flex; align-items: center; justify-content: center;
 }
 .hero-section .overlay {
-  content: ''; position: absolute; inset: 0;
-  background: rgba(0,0,0,0.4);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 47, 75, 0.6);
 }
-.hero-section .container { position: relative; z-index: 1; text-align: center; }
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
 .hero-section h1 {
-  font-size: 4rem; color: #fff; margin-bottom: 1.5rem;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
 }
 .hero-icons {
-  display: flex; flex-wrap: wrap;
-  justify-content: center; gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
 }
-.hero-icons img { filter: brightness(1.1); }
-@media (max-width: 768px) {
-  .hero-section h1 { font-size: 2.5rem; }
-  .hero-icons { gap: 1rem; }
+.hero-icons img {
+  width: 48px;
+  height: auto;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  ABOUT
-──────────────────────────────────────────────────────────────────────────────*/
-#about-us { background: var(--bg-light); width: 100%; }
-#about-us .row { max-width: 1140px; margin: 0 auto; }
-#about-us h2 {
-  font-size: 2.5rem; color: var(--primary-blue);
+/* About */
+.about-section {
+  background: var(--bg-light);
+}
+.about-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
   margin-bottom: 1rem;
 }
-#about-us p {
-  line-height: 1.6; margin-bottom: 1.5rem;
-}
-@media (max-width: 768px) {
-  #about-us .row { flex-direction: column-reverse; text-align: center; }
-  #about-us .btn { margin-top: 1rem; }
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  STATISTICS
-──────────────────────────────────────────────────────────────────────────────*/
-#statistic {
+/* Statistics */
+.statistic-section {
   background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
-  color: #fff; padding: 4rem 2rem; width: 100%;
+  color: #fff;
+  text-align: center;
 }
-#statistic .display-4 {
-  font-size: 3rem; margin-bottom: .5rem;
+.statistic-section h1 {
+  font-size: 3rem;
+  margin-bottom: .5rem;
 }
-#statistic p { font-weight: 600; }
-@media (max-width: 992px) {
-  #statistic .display-4 { font-size: 2.5rem; }
-}
-
-/*──────────────────────────────────────────────────────────────────────────────
-  OUR SERVICES
-──────────────────────────────────────────────────────────────────────────────*/
-#services { background: var(--bg-lighter); width: 100%; padding: 4rem 2rem; }
-#services .main-title {
-  font-size: 2.5rem; color: var(--primary-blue);
-  text-align: center; margin-bottom: 2rem;
-}
-.custom-card {
-  background: #111; color: #fff;
-  border-radius: 20px; position: relative;
-  padding-top: 2rem; text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,.05);
-}
-.custom-card .card-header {
-  position: absolute; top: 0; left: 50%;
-  transform: translate(-50%,-50%);
-  background: var(--primary-blue); color: #fff;
-  padding: .25rem .75rem; border-radius: 50px;
+.statistic-section p {
   font-weight: 600;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  PRODUCT (Service Benefits)
-──────────────────────────────────────────────────────────────────────────────*/
-#product { background: var(--bg-lighter); width: 100%; padding: 4rem 2rem; }
-#product .main-title {
-  font-size: 2.5rem; color: var(--primary-blue);
-  text-align: center; margin-bottom: 2rem;
+/* Our Services */
+.services-section {
+  background: var(--bg-lighter);
 }
-#product .benefit-card {
-  background: #fff; border-radius: 12px;
-  padding: 1rem 1rem 1rem 4rem;
-  position: relative; box-shadow: 0 2px 6px rgba(0,0,0,.05);
-}
-#product .icon-circle {
-  position: absolute; top: 50%; left: 1rem;
-  transform: translateY(-50%);
-  background: var(--primary-blue); width: 50px; height: 50px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-}
-#product .icon-circle img { width: 28px; height: 28px; }
-
-/*──────────────────────────────────────────────────────────────────────────────
-  TESTIMONIALS
-──────────────────────────────────────────────────────────────────────────────*/
-#testimonials { background: var(--bg-light); width: 100%; padding: 4rem 2rem; text-align: center; }
-#testimonials h2 {
-  font-size: 2.5rem; color: var(--primary-blue);
+.services-section .main-title {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  text-align: center;
   margin-bottom: 2rem;
+}
+.custom-card {
+  background: #111;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 2rem;
+  text-align: center;
+}
+.custom-card .card-header {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary-blue);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 50px;
+}
+.custom-card img {
+  max-height: 200px;
+  margin: 1rem auto;
+}
+
+/* Product Section (Service Benefits) */
+.product-section {
+  background: #fff;
+}
+.product-section .main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-blue);
+}
+.benefit-card {
+  background: #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  margin-top: 2rem;
+}
+.benefit-card h5 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+.icon-circle {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: translateY(-50%);
+  background: var(--primary-blue);
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-circle img {
+  width: 32px;
+  height: auto;
+}
+
+/* Testimonials */
+.testimonials-section {
+  background: var(--bg-light);
+  text-align: center;
+}
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
 }
 .testimonial {
-  max-width: 600px; margin: 0 auto 2rem;
-  font-style: italic; line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  background: #eee;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
 }
-.client-logos {
-  display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem;
+.testimonial p {
+  margin: 0 0 .5rem;
+  font-style: italic;
 }
-.client-logos img { height: 50px; }
+.client-logos img {
+  height: 50px;
+  margin: 0 .75rem;
+}
 
-/*──────────────────────────────────────────────────────────────────────────────
-  CLIENTLE
-──────────────────────────────────────────────────────────────────────────────*/
-#clientle { background: #fff; width: 100%; padding: 4rem 2rem; text-align: center; }
-#clientle h2 {
-  font-size: 2rem; color: var(--primary-blue);
-  margin-bottom: 2rem;
+/* Clientle */
+.clientle-section {
+  background: #fff;
 }
-#clientle .row { max-width: 1000px; margin: 0 auto; }
-#clientle .row > div { display: flex; justify-content: center; }
+.clientle-section h2 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+}
 
-/*──────────────────────────────────────────────────────────────────────────────
-  UPI SWITCH
-──────────────────────────────────────────────────────────────────────────────*/
-#upi-switch { background: #fff; width: 100%; padding: 4rem 2rem; }
-.media-gif { max-width: 100%; height: auto; }
+/* UPI Switch */
+.upi-switch-section {
+  background: var(--gradient-start);
+  color: #fff;
+}
+.media-gif {
+  max-width: 100%;
+}
 .bottom-right-icon {
-  position: absolute; bottom: 1rem; right: 1rem; width: 50px;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 80px;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  CONTACT
-──────────────────────────────────────────────────────────────────────────────*/
-#contact {
-  background: var(--dark-blue); width: 100%;
-  padding: 4rem 2rem; color: #fff;
+/* Contact */
+.contact-section {
+  background: var(--gradient-end);
+  color: #fff;
 }
-#contact h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
 .custom-input {
-  border-radius: .5rem; margin-bottom: 1rem;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem;
 }
 .btn-submit {
-  background: var(--accent-yellow); border: none;
-  color: #000; font-weight: 600;
+  background: var(--accent-yellow);
+  color: #002f4b;
+  border: none;
+  border-radius: .5rem;
   padding: .75rem 1.5rem;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  FOOTER
-──────────────────────────────────────────────────────────────────────────────*/
+/* Footer */
 .footer-section {
-  background: #fff; width: 100%;
-  padding: 2rem; text-align: center;
+  background: #fff;
+  flex-direction: column;
+  color: #333;
 }
 .footer-section a {
   color: var(--primary-blue);
-  text-decoration: none; margin: 0 .5rem;
+  text-decoration: none;
+  margin: 0 .5rem;
+}
+.footer-section p {
+  margin-top: 1rem;
 }
 
-/*──────────────────────────────────────────────────────────────────────────────
-  RESPONSIVENESS
-──────────────────────────────────────────────────────────────────────────────*/
-@media (max-width: 576px) {
-  .hero-section h1 { font-size: 2.25rem; }
-  #about-us h2 { font-size: 2rem; }
-  #product .main-title { font-size: 2rem; }
-  #statistic .display-4 { font-size: 2.25rem; }
-  .client-logos img { height: 40px; }
-  .custom-card, .benefit-card { padding: 1.5rem 1rem 1rem 3rem; }
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero-section h1 { font-size: 2rem; }
+  .about-section h2 { font-size: 2rem; }
+  .statistic-section h1 { font-size: 2rem; }
+  .services-section .main-title,
+  .product-section .main-title,
+  .testimonials-section h2,
+  .contact-section h2 { font-size: 2rem; }
 }
