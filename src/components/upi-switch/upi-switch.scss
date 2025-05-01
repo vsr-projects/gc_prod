@@ -1,0 +1,45 @@
+.cmp-upi-switch {
+    padding: $gutter 0;
+    background: $clr-light-bg;
+    text-align: center;
+  
+    &__heading {
+      font-family: $font-sans;
+      font-size: $fs-lg;
+      color: $clr-primary;
+      margin-bottom: $spacer;
+    }
+  
+    &__visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $gutter * 2;
+      flex-wrap: wrap;
+    }
+  
+    &__node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 120px;
+      text-align: center;
+  
+      img {
+        width: 60px;
+        height: auto;
+        margin-bottom: $spacer / 2;
+      }
+  
+      span {
+        font-family: $font-sans;
+        font-weight: $fw-bold;
+        color: $clr-text;
+      }
+  
+      &--initiator span { color: $clr-secondary; }
+      &--switch span    { color: $clr-primary;   }
+      &--receiver span  { color: $clr-secondary; }
+    }
+  }
+  

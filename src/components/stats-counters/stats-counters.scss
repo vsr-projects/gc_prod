@@ -1,0 +1,26 @@
+.cmp-stats-counters {
+    padding: $gutter 0;
+    background: $clr-dark-bg;
+    color: $clr-text-light;
+    display: flex;
+    justify-content: center;
+    gap: $gutter * 2;
+    flex-wrap: wrap;
+    text-align: center;
+  
+    &__item {
+      flex: 1 1 150px;
+    }
+  
+    &__number {
+      font-family: $font-sans;
+      font-size: 2.5rem;
+      font-weight: $fw-bold;
+    }
+  
+    &__label {
+      font-size: $fs-base;
+      margin-top: $spacer / 4;
+    }
+  }
+  

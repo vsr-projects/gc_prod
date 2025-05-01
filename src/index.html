@@ -1,39 +1,45 @@
+<!-- src/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GenCash</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- main styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- compiled CSS -->
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+  <!-- Hero -->
+  <section id="hero" class="cmp-hero"></section>
 
-  <!-- include snippets -->
-  @@include('includes/header.html')
-  @@include('includes/hero.html')
-  @@include('includes/about.html')
-  @@include('includes/statistic.html')
-  @@include('includes/services.html')
-  @@include('includes/product.html')       <!-- service-benefits renamed -->
-  @@include('includes/testimonials.html')
-  @@include('includes/clientle.html')
-  @@include('includes/upi-switch.html')
-  @@include('includes/contact.html')
-  @@include('includes/footer.html')
+  <!-- Services -->
+  <section id="services" class="cmp-services"></section>
 
-  <!-- Bootstrap JS bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- your animations -->
-  <script src="js/script.js"></script>
+  <!-- Benefits -->
+  <section id="benefits" class="cmp-benefits"></section>
+
+  <!-- UPI Switch -->
+  <section id="upi-switch" class="cmp-upi-switch"></section>
+
+  <!-- KYC & KYB Solutions -->
+  <section id="kyc" class="cmp-kyc"></section>
+
+  <!-- Clients Logos -->
+  <section id="clients-logos" class="cmp-clients-logos"></section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="cmp-testimonials"></section>
+
+  <!-- Stats Counters -->
+  <section id="stats-counters" class="cmp-stats-counters"></section>
+
+  <!-- Contact Form -->
+  <section id="contact-form" class="cmp-contact-form"></section>
+
+  <!-- Footer -->
+  <footer class="cmp-footer"></footer>
+
+  <!-- main script (ES module) -->
+  <script type="module" src="main.js"></script>
 </body>
 </html>

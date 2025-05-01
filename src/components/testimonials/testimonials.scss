@@ -1,0 +1,44 @@
+.cmp-testimonials {
+    padding: $gutter 0;
+    background: $clr-light-bg;
+    text-align: center;
+  
+    &__heading {
+      font-family: $font-sans;
+      font-size: $fs-lg;
+      color: $clr-secondary;
+      margin-bottom: $spacer;
+    }
+  
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: $gutter;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    &__item {
+      background: $clr-white;
+      border-left: 4px solid $clr-primary;
+      padding: $spacer;
+      font-style: italic;
+      position: relative;
+  
+      p {
+        margin-bottom: $spacer;
+        color: $clr-text;
+      }
+  
+      footer {
+        font-size: $fs-base * 0.9;
+        font-style: normal;
+        color: $clr-text-light;
+        background: $clr-secondary;
+        padding: $spacer / 2 $spacer;
+        border-radius: 4px;
+        display: inline-block;
+      }
+    }
+  }
+  

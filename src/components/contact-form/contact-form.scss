@@ -1,0 +1,61 @@
+.cmp-contact-form {
+    padding: $gutter 0;
+    background: $clr-white;
+    text-align: center;
+  
+    &__heading {
+      font-family: $font-sans;
+      font-size: $fs-lg;
+      color: $clr-primary;
+      margin-bottom: $spacer;
+    }
+  
+    &__form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: $gutter;
+  
+      & label {
+        display: block;
+        text-align: left;
+        margin-bottom: $spacer / 4;
+        font-weight: $fw-bold;
+        color: $clr-text;
+      }
+  
+      & input,
+      & textarea {
+        width: 100%;
+        padding: $spacer / 2;
+        border: 1px solid lighten($clr-text, 60%);
+        border-radius: 4px;
+        font-family: $font-sans;
+        font-size: $fs-base;
+        resize: vertical;
+      }
+  
+      & input:focus,
+      & textarea:focus {
+        border-color: $clr-primary;
+        outline: none;
+      }
+    }
+  
+    &__btn {
+      background: $clr-primary;
+      color: $clr-text-light;
+      border: none;
+      padding: $spacer $gutter;
+      font-size: $fs-base;
+      font-weight: $fw-bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  
+      &:hover {
+        background: darken($clr-primary, 10%);
+      }
+    }
+  }
+  
