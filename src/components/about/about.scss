@@ -1,0 +1,30 @@
+.cmp-about {
+    background: $clr-white;
+    color: $clr-text;
+    .cmp-about__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: $gutter;
+      flex-wrap: wrap;
+    }
+    &__text {
+      flex: 1 1 400px;
+    }
+    &__heading {
+      font-size: $fs-lg;
+      color: $clr-primary;
+      margin-bottom: $spacer;
+    }
+    &__copy {
+      font-size: $fs-base;
+      line-height: 1.6;
+    }
+    &__visual {
+      flex: 1 1 400px;
+      text-align: center;
+      img { max-width: 100%; height: auto; }
+    }
+  }
+  

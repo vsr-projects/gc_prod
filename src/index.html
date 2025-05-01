@@ -8,31 +8,43 @@
 </head>
 <body>
 
-  <!-- header snippet (create this file next) -->
+  <!-- Header -->
   @@include('components/header/header.html')
 
   <!-- Hero -->
-  <section id="hero" class="cmp-hero"></section>
-  <!-- Services -->
-  <section id="services" class="cmp-services"></section>
-  <!-- Benefits -->
-  <section id="benefits" class="cmp-benefits"></section>
-  <!-- UPI Switch -->
-  <section id="upi-switch" class="cmp-upi-switch"></section>
-  <!-- KYC/KYB Solutions -->
-  <section id="kyc" class="cmp-kyc"></section>
-  <!-- Clients Logos -->
-  <section id="clients-logos" class="cmp-clients-logos"></section>
-  <!-- Testimonials -->
-  <section id="testimonials" class="cmp-testimonials"></section>
-  <!-- Stats Counters -->
-  <section id="stats-counters" class="cmp-stats-counters"></section>
-  <!-- Contact Form -->
-  <section id="contact-form" class="cmp-contact-form"></section>
+  @@include('components/hero/hero.html')
 
-  <!-- footer snippet (already in your repo) -->
+  <!-- About -->
+  @@include('components/about/about.html')
+
+  <!-- Services -->
+  @@include('components/services/services.html')
+
+  <!-- Benefits -->
+  @@include('components/benefits-block/benefits-block.html')
+
+  <!-- UPI Switch -->
+  @@include('components/upi-switch/upi-switch.html')
+
+  <!-- KYC & KYB Solutions -->
+  @@include('components/kyc/kyc.html')
+
+  <!-- Clients Logos -->
+  @@include('components/clients-logos/clients-logos.html')
+
+  <!-- Testimonials -->
+  @@include('components/testimonials/testimonials.html')
+
+  <!-- Stats Counters -->
+  @@include('components/stats-counters/stats-counters.html')
+
+  <!-- Contact Form -->
+  @@include('components/contact-form/contact-form.html')
+
+  <!-- Footer -->
   @@include('components/footer/footer.html')
 
-  <script src="js/main.js"></script>
+  <!-- bootstrap all animations -->
+  <script type="module" src="js/init.js"></script>
 </body>
 </html>

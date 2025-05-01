@@ -4,15 +4,11 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 100%;
-}
-
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  color: #1F2937;
   background: #F5F7FA;
+  color: #1F2937;
   line-height: 1.6;
 }
 
@@ -21,17 +17,41 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button {
-  font-family: inherit;
-}
-
 section {
   padding: 2rem 0;
+}
+
+.cmp-about {
+  background: #FFFFFF;
+  color: #1F2937;
+}
+.cmp-about .cmp-about__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cmp-about__text {
+  flex: 1 1 400px;
+}
+.cmp-about__heading {
+  font-size: 1.25rem;
+  color: #00AEEF;
+  margin-bottom: 1rem;
+}
+.cmp-about__copy {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.cmp-about__visual {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.cmp-about__visual img {
+  max-width: 100%;
+  height: auto;
 }
 
 .cmp-services {

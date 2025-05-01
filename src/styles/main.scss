@@ -1,46 +1,26 @@
-// 1. Variables & Mixins (must be first, so $font-sans, $clr-*, etc. are defined)
+// 1. Variables & Mixins
 @import "./variables";
 @import "./mixins";
 
-// 2. Reset & Base Typography
+// 2. Base
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-}
-
+*::after { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: $font-sans;
-  color: $clr-text;
   background: $clr-light-bg;
+  color: $clr-text;
   line-height: 1.6;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button {
-  font-family: inherit;
-}
+a { text-decoration: none; color: inherit; }
 
 // 3. Section Utility
-section {
-  padding: $gutter 0;
-}
+section { padding: $gutter 0; }
 
 // 4. Component Styles
+@import "../components/header/header";
+@import "../components/about/about";
 @import "../components/hero/hero";
 @import "../components/services/services";
 @import "../components/benefits-block/benefits-block";
