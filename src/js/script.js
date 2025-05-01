@@ -3,13 +3,13 @@
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
-// ─── Header ───────────────────────────────────────────────────────────────────
+// ─── HEADER SHRINK ─────────────────────────────────────────────────────────────
 window.addEventListener('scroll', () => {
   document.getElementById('mainNavbar')
     .classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// ─── Hero Animations ──────────────────────────────────────────────────────────
+// ─── HERO ANIMATIONS ───────────────────────────────────────────────────────────
 gsap.from('#hero h1', {
   y: 80, opacity: 0, duration: 1.2, ease: 'power2.out'
 });
@@ -18,7 +18,7 @@ gsap.from('#hero .hero-icons img', {
   scale: 0.5, opacity: 0, stagger: 0.15, duration: 1
 });
 
-// ─── About Section ────────────────────────────────────────────────────────────
+// ─── ABOUT SECTION ─────────────────────────────────────────────────────────────
 gsap.from('#about-us .col-md-6:first-child', {
   scrollTrigger: { trigger: '#about-us', start: 'top 80%' },
   x: -100, opacity: 0, duration: 1
@@ -28,7 +28,7 @@ gsap.from('#about-us .col-md-6:last-child img', {
   x: 100, opacity: 0, duration: 1
 });
 
-// ─── Statistics Count-Up ──────────────────────────────────────────────────────
+// ─── STATISTICS COUNT-UP ───────────────────────────────────────────────────────
 document.querySelectorAll('#statistic .display-4').forEach(el => {
   const target = el.getAttribute('data-target');
   const numeric = parseFloat(target);
@@ -43,19 +43,19 @@ document.querySelectorAll('#statistic .display-4').forEach(el => {
   });
 });
 
-// ─── Our Services ─────────────────────────────────────────────────────────────
+// ─── OUR SERVICES ──────────────────────────────────────────────────────────────
 gsap.from('#services .custom-card', {
   scrollTrigger: { trigger: '#services', start: 'top 80%' },
   scale: 0.8, opacity: 0, stagger: 0.2, duration: 1
 });
 
-// ─── Service Benefits ─────────────────────────────────────────────────────────
-gsap.from('#services .benefit-card', {
-  scrollTrigger: { trigger: '#services', start: 'top 60%' },
+// ─── PRODUCT (SERVICE BENEFITS) ─────────────────────────────────────────────────
+gsap.from('#product .benefit-card', {
+  scrollTrigger: { trigger: '#product', start: 'top 80%' },
   x: 100, opacity: 0, stagger: 0.2, duration: 1
 });
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
+// ─── TESTIMONIALS ──────────────────────────────────────────────────────────────
 gsap.from('#testimonials h2', {
   scrollTrigger: { trigger: '#testimonials', start: 'top 80%' },
   y: 50, opacity: 0, duration: 1
@@ -69,13 +69,13 @@ gsap.from('#testimonials .client-logos img', {
   x: -50, opacity: 0, stagger: 0.2, duration: 1
 });
 
-// ─── Clientle Logos ──────────────────────────────────────────────────────────
+// ─── CLIENTLE ─────────────────────────────────────────────────────────────────
 gsap.from('#clientle img', {
   scrollTrigger: { trigger: '#clientle', start: 'top 80%' },
   scale: 0.8, opacity: 0, stagger: 0.2, duration: 1
 });
 
-// ─── UPI Switch ───────────────────────────────────────────────────────────────
+// ─── UPI SWITCH ────────────────────────────────────────────────────────────────
 gsap.from('#upi-switch .media-gif', {
   scrollTrigger: { trigger: '#upi-switch', start: 'top 80%' },
   scale: 0.8, opacity: 0, duration: 1
@@ -85,7 +85,7 @@ gsap.from('#upi-switch .bottom-right-icon', {
   y: 50, opacity: 0, duration: 1
 });
 
-// ─── Contact Form ─────────────────────────────────────────────────────────────
+// ─── CONTACT FORM ──────────────────────────────────────────────────────────────
 gsap.from('#contact h2, #contact input, #contact textarea, #contact button', {
   scrollTrigger: { trigger: '#contact', start: 'top 80%' },
   y: 30, opacity: 0, stagger: 0.2, duration: 1
