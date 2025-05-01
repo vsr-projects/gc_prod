@@ -1,45 +1,38 @@
-<!-- src/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GenCash</title>
-  <!-- compiled CSS -->
-  <link rel="stylesheet" href="styles/main.css" />
+  <title>Acme Payments</title>
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
+
+  <!-- header snippet (create this file next) -->
+  @@include('components/header/header.html')
+
   <!-- Hero -->
   <section id="hero" class="cmp-hero"></section>
-
   <!-- Services -->
   <section id="services" class="cmp-services"></section>
-
   <!-- Benefits -->
   <section id="benefits" class="cmp-benefits"></section>
-
   <!-- UPI Switch -->
   <section id="upi-switch" class="cmp-upi-switch"></section>
-
-  <!-- KYC & KYB Solutions -->
+  <!-- KYC/KYB Solutions -->
   <section id="kyc" class="cmp-kyc"></section>
-
   <!-- Clients Logos -->
   <section id="clients-logos" class="cmp-clients-logos"></section>
-
   <!-- Testimonials -->
   <section id="testimonials" class="cmp-testimonials"></section>
-
   <!-- Stats Counters -->
   <section id="stats-counters" class="cmp-stats-counters"></section>
-
   <!-- Contact Form -->
   <section id="contact-form" class="cmp-contact-form"></section>
 
-  <!-- Footer -->
-  <footer class="cmp-footer"></footer>
+  <!-- footer snippet (already in your repo) -->
+  @@include('components/footer/footer.html')
 
-  <!-- main script (ES module) -->
-  <script type="module" src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,429 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #1F2937;
+  background: #F5F7FA;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.cmp-services {
+  padding: 2rem 0;
+  background: #F5F7FA;
+  text-align: center;
+}
+.cmp-services__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #00AEEF;
+  margin-bottom: 1rem;
+}
+.cmp-services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cmp-services__card {
+  background: #0A2C4E;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.cmp-services__card:hover {
+  transform: translateY(-5px);
+}
+.cmp-services__card img {
+  width: 60px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+.cmp-services__label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cmp-benefits {
+  padding: 2rem 0;
+  background: #F5F7FA;
+  text-align: center;
+}
+.cmp-benefits__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #005B9F;
+  margin-bottom: 1.5rem;
+}
+.cmp-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cmp-benefits__item {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cmp-benefits__icon {
+  width: 48px;
+  margin-bottom: 1rem;
+}
+.cmp-benefits__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1F2937;
+}
+.cmp-benefits__text {
+  font-size: 1rem;
+  color: #1F2937;
+  line-height: 1.5;
+}
+
+.cmp-upi-switch {
+  padding: 2rem 0;
+  background: #F5F7FA;
+  text-align: center;
+}
+.cmp-upi-switch__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #00AEEF;
+  margin-bottom: 1rem;
+}
+.cmp-upi-switch__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.cmp-upi-switch__node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 120px;
+  text-align: center;
+}
+.cmp-upi-switch__node img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.cmp-upi-switch__node span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #1F2937;
+}
+.cmp-upi-switch__node--initiator span {
+  color: #005B9F;
+}
+.cmp-upi-switch__node--switch span {
+  color: #00AEEF;
+}
+.cmp-upi-switch__node--receiver span {
+  color: #005B9F;
+}
+
+.cmp-kyc {
+  padding: 2rem 0;
+  background: #F5F7FA;
+  text-align: center;
+}
+.cmp-kyc__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #005B9F;
+  margin-bottom: 1.5rem;
+}
+.cmp-kyc__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cmp-kyc__card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cmp-kyc__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.cmp-kyc__icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.cmp-kyc__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1F2937;
+}
+.cmp-kyc__text {
+  font-size: 1rem;
+  color: #1F2937;
+  line-height: 1.5;
+}
+
+.cmp-clients-logos {
+  padding: 2rem 0;
+  background: #FFFFFF;
+  text-align: center;
+}
+.cmp-clients-logos__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #1F2937;
+  margin-bottom: 1rem;
+}
+.cmp-clients-logos__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.cmp-clients-logos__grid img {
+  max-width: 120px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.cmp-clients-logos__grid img:hover {
+  opacity: 1;
+}
+
+.cmp-testimonials {
+  padding: 2rem 0;
+  background: #F5F7FA;
+  text-align: center;
+}
+.cmp-testimonials__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #005B9F;
+  margin-bottom: 1rem;
+}
+.cmp-testimonials__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.cmp-testimonials__item {
+  background: #FFFFFF;
+  border-left: 4px solid #00AEEF;
+  padding: 1rem;
+  font-style: italic;
+  position: relative;
+}
+.cmp-testimonials__item p {
+  margin-bottom: 1rem;
+  color: #1F2937;
+}
+.cmp-testimonials__item footer {
+  font-size: 0.9rem;
+  font-style: normal;
+  color: #FFFFFF;
+  background: #005B9F;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.cmp-stats-counters {
+  padding: 2rem 0;
+  background: #0A2C4E;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.cmp-stats-counters__item {
+  flex: 1 1 150px;
+}
+.cmp-stats-counters__number {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.cmp-stats-counters__label {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.cmp-contact-form {
+  padding: 2rem 0;
+  background: #FFFFFF;
+  text-align: center;
+}
+.cmp-contact-form__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #00AEEF;
+  margin-bottom: 1rem;
+}
+.cmp-contact-form__form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+.cmp-contact-form__form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+.cmp-contact-form__form input, .cmp-contact-form__form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgb(179.5348837209, 193.2558139535, 212.4651162791);
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+.cmp-contact-form__form input:focus, .cmp-contact-form__form textarea:focus {
+  border-color: #00AEEF;
+  outline: none;
+}
+.cmp-contact-form__btn {
+  background: #00AEEF;
+  color: #FFFFFF;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cmp-contact-form__btn:hover {
+  background: rgb(0, 136.870292887, 188);
+}
+
+.cmp-footer {
+  background: #0A2C4E;
+  color: #FFFFFF;
+  padding: 2rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.cmp-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  color: #FFFFFF;
+}
+.cmp-footer__top > * {
+  flex: 1 1 200px;
+}
+.cmp-footer__about h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.cmp-footer__about p {
+  line-height: 1.5;
+}
+.cmp-footer__links {
+  display: flex;
+  gap: 4rem;
+}
+.cmp-footer__links .cmp-footer__col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.cmp-footer__links .cmp-footer__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cmp-footer__links .cmp-footer__col ul li {
+  margin-bottom: 0.5rem;
+}
+.cmp-footer__links .cmp-footer__col ul a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.cmp-footer__links .cmp-footer__col ul a:hover {
+  color: #00AEEF;
+}
+.cmp-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
+.cmp-footer__social a img {
+  width: 24px;
+  margin-left: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.cmp-footer__social a img:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
