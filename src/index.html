@@ -3,55 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GenCash Static Build</title>
+  <title>GenCash</title>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- main styles -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Header (sticky) -->
+
+  <!-- include snippets -->
   @@include('includes/header.html')
+  @@include('includes/hero.html')
+  @@include('includes/about.html')
+  @@include('includes/statistic.html')
+  @@include('includes/services.html')
+  @@include('includes/product.html')       <!-- service-benefits renamed -->
+  @@include('includes/testimonials.html')
+  @@include('includes/clientle.html')
+  @@include('includes/upi-switch.html')
+  @@include('includes/contact.html')
+  @@include('includes/footer.html')
 
-  <!-- Scroll Container -->
-  <div class="scroll-container">
-    <!-- Hero -->
-    @@include('includes/hero.html')
-
-    <!-- About -->
-    @@include('includes/about.html')
-
-    <!-- Statistics -->
-    @@include('includes/statistic.html')
-
-    <!-- Our Services -->
-    @@include('includes/services.html')
-
-    <!-- Product (Service Benefits) -->
-    @@include('includes/product.html')
-
-    <!-- Testimonials -->
-    @@include('includes/testimonials.html')
-
-    <!-- Clientle -->
-    @@include('includes/clientle.html')
-
-    <!-- UPI Switch -->
-    @@include('includes/upi-switch.html')
-
-    <!-- Contact -->
-    @@include('includes/contact.html')
-
-    <!-- Footer -->
-    @@include('includes/footer.html')
-  </div>
-
-  <!-- JS Bundles -->
+  <!-- Bootstrap JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- your animations -->
   <script src="js/script.js"></script>
 </body>
 </html>
