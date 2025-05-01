@@ -1,4 +1,5 @@
 // src/init.js
+import { initHeader } from "./components/header/header.js";
 import { initHeroAnimation }           from "./components/hero/hero.js";
 import { initAboutAnimation }          from "./components/about/about.js";
 import { initServicesAnimation }       from "./components/services/services.js";
@@ -15,6 +16,7 @@ import {
 import { initFooter }                  from "./components/footer/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  initHeader();
   initHeroAnimation();
   initAboutAnimation();
   initServicesAnimation();

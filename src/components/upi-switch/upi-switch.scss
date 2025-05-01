@@ -1,8 +1,22 @@
 .cmp-upi-switch {
-    padding: $gutter 0;
-    background: $clr-light-bg;
-    text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $gutter*2 0;
+  background: linear-gradient(90deg, #002f4b, #2e7bb4);
   
+    &__gif {
+      width: 20rem;
+      height: auto;
+    }
+    &__badge {
+      position: absolute;
+      bottom: $spacer;
+      right: $spacer;
+      width: 4rem;
+      height: auto;
+    }
     &__heading {
       font-family: $font-sans;
       font-size: $fs-lg;

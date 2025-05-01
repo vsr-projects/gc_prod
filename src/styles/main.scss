@@ -1,11 +1,16 @@
-// 1. Variables & Mixins
+// src/styles/main.scss
+
+// 1) Core variables & mixins
 @import "./variables";
 @import "./mixins";
 
-// 2. Base
+// 2) Base styles
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: $font-sans;
@@ -13,12 +18,16 @@ body {
   color: $clr-text;
   line-height: 1.6;
 }
-a { text-decoration: none; color: inherit; }
 
-// 3. Section Utility
+// 3) Utility
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 section { padding: $gutter 0; }
 
-// 4. Component Styles
+// 4) Component styles (in dependency order)
 @import "../components/header/header";
 @import "../components/about/about";
 @import "../components/hero/hero";

@@ -1,26 +1,27 @@
-// Colors
-$clr-primary:    #00AEEF;
-$clr-secondary:  #005B9F;
-$clr-dark-bg:    #0A2C4E;
-$clr-light-bg:   #F5F7FA;
-$clr-white:      #FFFFFF;
-$clr-text:       #1F2937;
-$clr-text-light: #FFFFFF;
+// src/styles/_variables.scss
 
-// Typography
-$font-sans:      'Poppins', sans-serif;
-$fs-hero:        3rem;
-$fs-lg:          1.25rem;
-$fs-base:        1rem;
-$fw-bold:        700;
-$fw-normal:      400;
+// — Color Palette —
+$clr-primary:      #0056A3;   // your GC‐blue
+$clr-accent:       #FFC600;   // your GC‐yellow
+$clr-text:         #002f4b;   // deep navy text
+$clr-white:        #FFFFFF;
+$clr-light-bg:     #F8F8F8;
+$clr-light-blue:   #E5F1FB;
 
-// Spacing
-$spacer:         1rem;
-$gutter:         2rem;
+// — Typography —
+$font-sans:        'Poppins', sans-serif;
+$fw-regular:       400;
+$fw-medium:        500;
+$fw-bold:          700;
+$fs-base:          1rem;
+$fs-lg:            2.5rem;
+$fs-xl:            4rem;
 
-// Breakpoints
-$bp-sm:          576px;
-$bp-md:          768px;
-$bp-lg:          992px;
-$bp-xl:          1200px;
+// — Spacing —
+$spacer:           1rem;
+$gutter:           2rem;
+
+// — Breakpoints —
+$bp-sm:            576px;
+$bp-md:            768px;
+$bp-lg:            992px;

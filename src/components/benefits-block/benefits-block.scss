@@ -1,7 +1,8 @@
 .cmp-benefits {
-    padding: $gutter 0;
-    background: $clr-light-bg;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: $gutter;
+    padding: $gutter*2 0;
   
     &__heading {
       font-family: $font-sans;
@@ -10,6 +11,17 @@
       margin-bottom: $spacer * 1.5;
     }
   
+
+    &__card .icon {
+      width: 3rem;
+      height: 3rem;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
     &__grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

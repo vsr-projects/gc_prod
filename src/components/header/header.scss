@@ -1,0 +1,98 @@
+// Sticky, glassy header that shrinks on scroll
+.cmp-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem $gutter;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+  
+    &.scrolled {
+      padding: 0.75rem $gutter;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  
+    &__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &__logo img {
+      height: 37px;
+      width: 200px;
+    }
+  
+    &__list {
+      display: flex;
+      gap: $gutter;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  
+      a {
+        font-family: $font-sans;
+        font-weight: $fw-medium;
+        color: $clr-text;
+        font-size: $fs-base;
+        text-decoration: none;
+        transition: color 0.2s;
+  
+        &:hover { color: $clr-primary; }
+      }
+    }
+  
+    &__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 1rem;
+  
+      &-icon {
+        display: block;
+        width: 1.5rem;
+        height: 0.125rem;
+        background: $clr-text;
+        position: relative;
+  
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: inherit;
+          left: 0;
+        }
+        &::before { top: -0.5rem; }
+        &::after  { top: 0.5rem; }
+      }
+    }
+  
+    @media (max-width: $bp-md) {
+      &__list { display: none; }
+      &__toggle { display: block; }
+  
+      &.menu-open {
+        background: rgba(255,255,255,0.95);
+  
+        .cmp-header__list {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          right: $gutter;
+          background: $clr-white;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          padding: $gutter;
+          gap: $spacer;
+        }
+      }
+    }
+  }
+  

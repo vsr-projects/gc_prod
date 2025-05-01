@@ -1,0 +1,39 @@
+// Full-viewport hero with background and scroll-snap
+.cmp-hero {
+    position: relative;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../../assets/hero-bg.png') center/cover no-repeat;
+  
+    &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+  
+    &__content {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: $gutter;
+      color: $clr-white;
+      text-align: left;
+      z-index: 1;
+    }
+  
+    &__title { font-size: $fs-xl; /* 4rem desktop */ }
+    &__icons {
+      display: flex;
+      gap: $gutter;
+  
+      img {
+        width: 4rem;
+        height: auto;
+        opacity: 0; // for GSAP entry
+      }
+    }
+  }
+  
