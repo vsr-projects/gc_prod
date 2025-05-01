@@ -1,0 +1,15 @@
+{
+    "name": "gc_prod",
+    "version": "1.0.0",
+    "scripts": {
+      "dev": "gulp",
+      "build": "gulp html"
+    },
+    "devDependencies": {
+      "browser-sync": "^2.27.11",
+      "gulp": "^4.0.2",
+      "gulp-file-include": "^2.3.0",
+      "gulp-htmlmin": "^5.0.1"
+    }
+  }
+  
