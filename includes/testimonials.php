@@ -1,0 +1,17 @@
+<?php
+// includes/testimonials.php
+?>
+<section id="testimonials" class="panel testimonials-section">
+  <div class="container text-center">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial mx-auto mb-4">
+      <p class="fst-italic">“GC transformed how we engage with our citizens—our participation rates doubled!”</p>
+      <span>— City Manager, Springfield</span>
+    </div>
+    <div class="client-logos d-flex justify-content-center gap-4 flex-wrap">
+      <img src="assets/logo1.png" alt="Client 1" height="50">
+      <img src="assets/logo2.png" alt="Client 2" height="50">
+      <img src="assets/logo3.png" alt="Client 3" height="50">
+    </div>
+  </div>
+</section>

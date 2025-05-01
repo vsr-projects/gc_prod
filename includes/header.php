@@ -1,0 +1,44 @@
+<?php
+// includes/header.php
+?>
+<nav id="mainNavbar" class="navbar navbar-expand-md navbar-light bg-white fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="#hero">
+      <img src="assets/genchas_logo.jpg" alt="GenCash Logo" style="height:40px;">
+    </a>
+    <!-- mobile toggle -->
+    <button id="sidebarToggle" class="navbar-toggler border-0" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- desktop nav -->
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav align-items-center gap-3 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#for-developers">For Developers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        <li class="nav-item">
+          <button class="btn btn-info text-white px-3">Connect</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- mobile sidebar -->
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-header d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+    <h5 class="m-0">GenCash</h5>
+    <button id="sidebarClose" class="btn-close"></button>
+  </div>
+  <ul class="list-unstyled px-3 mt-3">
+    <li><a href="#hero" class="d-block mb-2">Home</a></li>
+    <li><a href="#about-us" class="d-block mb-2">About Us</a></li>
+    <li><a href="#services" class="d-block mb-2">Services</a></li>
+    <li><a href="#for-developers" class="d-block mb-2">For Developers</a></li>
+    <li><a href="#contact" class="d-block mb-2">Contact Us</a></li>
+    <li class="mt-3"><button class="btn btn-info w-100 text-white">Connect</button></li>
+  </ul>
+</div>
+<div id="sidebarOverlay" class="sidebar-overlay"></div>
